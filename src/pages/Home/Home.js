@@ -1,29 +1,52 @@
 import React from 'react';
 import Logo from '../../assets/PNG/logo.png';
+import Header from '../../components/Header/Header';
+import './Home.css';
 
 function Home() {
   return (
-    <div className="home bg-primary-blue">
-      <div className="md:container mx-auto px-4 py-3 text-white">
-        <header className="flex justify-between items-center text-sm">
-          <p className="font-bold flex gap-1 items-center">
-            <i className="fa-solid fa-chevron-left" />
-            RysthCraft
-          </p>
-          <p>Hearthstone</p>
-          <div className="flex gap-4">
-            <i className="fa-solid fa-microphone" />
-            <i className="fa-solid fa-gear" />
-          </div>
-        </header>
-        <div className="py-5 grid grid-cols-2">
+    <div className="home">
+      <Header />
+      <div className="bg-primary-blue text-white">
+        <div className="md:container py-2 grid grid-cols-2 ">
           <span>
-            <img className="" src={Logo} alt="" />
+            <img src={Logo} alt="" />
           </span>
           <span className="flex flex-col justify-center">
-            <h2 className="text-2xl uppercase">Games</h2>
-            <p className="text-sm">2,438 Views</p>
+            <h3 className="text-2xl uppercase font-bold">Games</h3>
+            <p className="text-xs">2,438 Views</p>
           </span>
+        </div>
+      </div>
+      <div className="bg-primary-blue-dark">
+        <div className="md:container px-4 py-1">
+          <h2 className="text-white uppercase text-xs ">Stats by Class</h2>
+        </div>
+      </div>
+      <div className="grid grid-cols-2">
+        <div className="card bg-primary-blue text-white">
+          <img className="card-image" src={Logo} alt="" />
+          <div className="card-actions">
+            <button type="button" className="card-button">
+              <i className="fa-solid fa-circle-arrow-right" />
+            </button>
+          </div>
+          <div className="card-data">
+            <h3 className="card-title">Druid</h3>
+            <p className="cart-count">48</p>
+          </div>
+        </div>
+        <div className="card bg-primary-blue-dark text-white">
+          <img className="card-image" src={Logo} alt="" />
+          <div className="card-actions">
+            <button type="button" className="card-button">
+              <i className="fa-solid fa-circle-arrow-right" />
+            </button>
+          </div>
+          <div className="card-data">
+            <h3 className="card-title">Druid</h3>
+            <p className="cart-count">48</p>
+          </div>
         </div>
       </div>
     </div>
