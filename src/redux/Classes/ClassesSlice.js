@@ -13,10 +13,25 @@ export const fetchClasses = createAsyncThunk(
   },
 );
 
+export const fetchClassBySlug = createAsyncThunk(
+  'fetch/fetchClassBySlug',
+  async (slug, { rejectWithValue }) => {
+    try {
+      const response = await axios.get(
+        `https://api.open5e.com/v1/classes/?slug=${slug}`,
+      );
+      return response.data.results;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  },
+);
+
 const existClassArray = JSON.parse(localStorage.getItem('classArray'));
 
 const initialState = {
   classArray: existClassArray || [],
+  classSelected: {},
 };
 
 const classesSlice = createSlice({
@@ -28,6 +43,11 @@ const classesSlice = createSlice({
       const updateArray = action.payload.results;
       state.classArray = updateArray;
       localStorage.setItem('classArray', JSON.stringify(state.classArray));
+    });
+    builder.addCase(fetchClassBySlug.fulfilled, (state, action) => {
+      state.classSelected = {
+        ...action.payload[0],
+      };
     });
   },
 });

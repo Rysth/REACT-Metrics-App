@@ -31,7 +31,7 @@ function Home() {
         {classArray.map((item) => (
           <Card
             key={item.slug}
-            id={item.slug}
+            slug={item.slug}
             title={item.name}
             count={item.archetypes.length}
             imageSource={classImages[item.slug]}
