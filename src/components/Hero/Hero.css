@@ -1,0 +1,37 @@
+.hero {
+  background-color: var(--CL-primary-blue);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  min-height: 10em;
+  gap: 1em;
+}
+
+.hero-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.hero-information {
+  color: var(--CL-neutral-white);
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.25em;
+  font-size: 0.95rem;
+  margin: 0;
+}

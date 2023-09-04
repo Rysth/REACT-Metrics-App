@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Separator.css';
 
 function Separator({ text }) {
   return (
-    <div className="bg-primary-blue-dark">
-      <div className="md:container px-4 py-1">
+    <div className="separator">
+      <div className="separator-content">
         <h2 className="text-white uppercase text-xs ">{text}</h2>
       </div>
     </div>

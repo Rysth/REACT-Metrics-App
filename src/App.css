@@ -1,8 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/lato');
 @import url('https://fonts.cdnfonts.com/css/gill-sans-2');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root {
   --CL-primary-blue: #326cd8;
@@ -36,6 +33,7 @@ h3,
 h4,
 h5 {
   font-family: var(--FF-lato);
+  margin: 0;
 }
 
 p,
@@ -53,6 +51,12 @@ iframe,
 video {
   display: block;
   max-width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  margin: 0;
 }
 
 .container {
