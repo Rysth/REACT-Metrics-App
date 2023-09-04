@@ -3,3 +3,24 @@
   height: 12em;
   margin: 0 auto;
 }
+
+.detail-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--CL-primary-blue);
+  color: var(--CL-neutral-white);
+}
+
+.detail-card .title {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-card .actions {
+  display: inherit;
+  align-items: inherit;
+  gap: 0.5em;
+}
