@@ -33,7 +33,7 @@ const classesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchClasses.fulfilled, (state, action) => {
-      state.classArray.push(...action.payload);
+      state.classArray = action.payload;
     });
   },
 });

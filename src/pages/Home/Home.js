@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import Logo from '../../assets/PNG/logo.png';
 import Header from '../../components/Header/Header';
+import Card from '../../components/Card/Card';
 import './Home.css';
 
 function Home() {
+  const { classArray } = useSelector((store) => store.classes);
+
+  useEffect(() => {}, [classArray]);
+
   return (
     <div className="home">
       <Header />
@@ -24,30 +31,9 @@ function Home() {
         </div>
       </div>
       <div className="grid grid-cols-2">
-        <div className="card bg-primary-blue text-white">
-          <img className="card-image" src={Logo} alt="" />
-          <div className="card-actions">
-            <button type="button" className="card-button">
-              <i className="fa-solid fa-circle-arrow-right" />
-            </button>
-          </div>
-          <div className="card-data">
-            <h3 className="card-title">Druid</h3>
-            <p className="cart-count">48</p>
-          </div>
-        </div>
-        <div className="card bg-primary-blue-dark text-white">
-          <img className="card-image" src={Logo} alt="" />
-          <div className="card-actions">
-            <button type="button" className="card-button">
-              <i className="fa-solid fa-circle-arrow-right" />
-            </button>
-          </div>
-          <div className="card-data">
-            <h3 className="card-title">Druid</h3>
-            <p className="cart-count">48</p>
-          </div>
-        </div>
+        {classArray.map((item) => (
+          <Card key={uuidv4()} title={item} count={10} imageSource={Logo} />
+        ))}
       </div>
     </div>
   );

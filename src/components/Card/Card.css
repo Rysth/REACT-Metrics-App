@@ -1,0 +1,42 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  height: 11em;
+  padding: 0.75em;
+}
+
+.card-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  z-index: 0;
+  filter: brightness(0.35);
+}
+
+.card-actions,
+.card-data {
+  position: relative;
+  z-index: 100;
+  text-align: right;
+}
+
+.card-button {
+  font-size: 1.5rem;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.card-count {
+  text-align: right;
+}
