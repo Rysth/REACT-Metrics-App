@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Card.css';
+import { darkCards } from '../../redux/Classes/Data/Images';
 
 function Card(
   /* prettier-ignore */
@@ -12,8 +13,13 @@ function Card(
     imageSource,
   },
 ) {
+  const isDark = darkCards.includes(slug);
+
   return (
-    <Link to={`/class/${slug}`} className="card bg-primary-blue">
+    <Link
+      to={`/class/${slug}`}
+      className={isDark ? 'card bg-primary-blue-dark' : 'card bg-primary-blue'}
+    >
       <img className="card-image" src={imageSource} alt="" />
       <div className="card-actions">
         <button type="button" className="card-button">

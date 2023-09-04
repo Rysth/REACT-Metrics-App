@@ -21,7 +21,7 @@ function Hero({ count }) {
 }
 
 Hero.propTypes = {
-  count: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
 };
 
 export default Hero;

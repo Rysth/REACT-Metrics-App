@@ -26,4 +26,13 @@ const classImages = {
   rogue: Image12,
 };
 
+export const darkCards = [
+  'bard',
+  'cleric',
+  'monk',
+  'monk',
+  'paladin',
+  'sorcerer',
+  'warlock',
+];
 export default classImages;

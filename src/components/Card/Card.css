@@ -7,19 +7,19 @@
   height: 11em;
   padding: 0.75em;
   text-decoration: none;
+  overflow: hidden;
 }
 
 .card-image {
-  position: absolute;
-  height: 10em;
+  height: 100%;
   width: 100%;
-  top: 0;
-  left: 0;
+  position: absolute;
   right: 0;
   bottom: 0;
   object-fit: contain;
   z-index: 0;
-  filter: brightness(0.5);
+  transform: scale(0.8);
+  filter: brightness(0.5) drop-shadow(0 0 5px var(--CL-neutral-white));
 }
 
 .card-actions,
