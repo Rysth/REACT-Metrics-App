@@ -12,19 +12,13 @@ function Detail() {
 
   useEffect(() => {
     dispatch(fetchClassBySlug(params.slug));
-  }, [dispatch, classSelected, params.slug]);
+  }, [dispatch, params.slug]);
 
   return (
-    classSelected.archetypes && (
+    classSelected && (
       <div className="detail">
-        <div className="md:container py-2 grid grid-cols-2 bg-primary-blue ">
-          <span>
-            <img
-              className="detail-image"
-              src={classImages[params.slug]}
-              alt=""
-            />
-          </span>
+        <div className="md:container py-2 grid grid-cols-2 bg-primary-blue">
+          <img className="detail-image" src={classImages[params.slug]} alt="" />
           <span className="flex flex-col items-end justify-center px-4 text-white">
             <h3 className="text-2xl uppercase font-bold">
               {classSelected.name}

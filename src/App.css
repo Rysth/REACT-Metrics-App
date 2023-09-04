@@ -62,3 +62,12 @@ video {
 .bg-primary-blue-dark {
   background-color: var(--CL-primary-blue-dark);
 }
+
+.hero-section {
+  height: 12em;
+}
+
+.hero-image {
+  height: 100%;
+  object-fit: contain;
+}

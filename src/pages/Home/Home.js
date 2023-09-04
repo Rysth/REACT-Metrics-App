@@ -12,13 +12,16 @@ function Home() {
   return (
     <div className="home">
       <div className="bg-primary-blue text-white">
-        <div className="md:container py-2 grid grid-cols-2 ">
+        <div className="md:container grid grid-cols-2 hero-section">
           <span>
-            <img src={Logo} alt="" />
+            <img className="hero-image" src={Logo} alt="" />
           </span>
           <span className="flex flex-col justify-center">
-            <h3 className="text-2xl uppercase font-bold">Games</h3>
-            <p className="text-xs">2,438 Views</p>
+            <h3 className="text-2xl uppercase font-bold">Classes</h3>
+            <p className="text-sm flex gap-1">
+              <span>{classArray.length}</span>
+              Views
+            </p>
           </span>
         </div>
       </div>

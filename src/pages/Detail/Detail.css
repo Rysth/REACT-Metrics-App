@@ -1,4 +1,5 @@
 .detail-image {
-  max-width: 7em;
+  object-fit: contain;
+  height: 12em;
   margin: 0 auto;
 }

@@ -31,7 +31,7 @@ const existClassArray = JSON.parse(localStorage.getItem('classArray'));
 
 const initialState = {
   classArray: existClassArray || [],
-  classSelected: {},
+  classSelected: undefined,
 };
 
 const classesSlice = createSlice({
@@ -39,8 +39,7 @@ const classesSlice = createSlice({
   initialState,
   reducers: {
     removeClassSelected(state) {
-      state.classSelected = {};
-      console.log(state.classSelected);
+      state.classSelected = undefined;
     },
   },
   extraReducers: (builder) => {

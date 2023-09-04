@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { classesActions } from '../../redux/Classes/ClassesSlice';
@@ -13,8 +13,6 @@ function Header() {
     navigator('/');
   };
 
-  useEffect(() => {}, [classSelected]);
-
   return (
     <header className="text-sm bg-primary-blue-dark">
       <div className="md:container flex justify-between items-center px-4 py-3 text-white">
@@ -24,7 +22,7 @@ function Header() {
           onClick={handleReturnHome}
         >
           <i className="fa-solid fa-chevron-left" />
-          {classSelected.archetypes ? 'Return' : 'RysthCraft'}
+          {classSelected ? 'Return' : 'RysthCraft'}
         </button>
         <p>Dungeons & Dragons</p>
         <div className="flex gap-4">
