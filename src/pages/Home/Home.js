@@ -1,19 +1,16 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Logo from '../../assets/PNG/logo.png';
-import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
 import classImages from '../../redux/Classes/Data/Images';
 import './Home.css';
 
 function Home() {
   const { classArray } = useSelector((store) => store.classes);
-
   useEffect(() => {}, [classArray]);
 
   return (
     <div className="home">
-      <Header />
       <div className="bg-primary-blue text-white">
         <div className="md:container py-2 grid grid-cols-2 ">
           <span>
@@ -35,7 +32,7 @@ function Home() {
           <Card
             key={item.slug}
             id={item.slug}
-            className={item.name}
+            title={item.name}
             count={item.archetypes.length}
             imageSource={classImages[item.slug]}
           />

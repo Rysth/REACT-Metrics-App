@@ -25,7 +25,8 @@ const classesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchClasses.fulfilled, (state, action) => {
-      state.classArray = action.payload.results;
+      const updateArray = action.payload.results;
+      state.classArray = updateArray;
       localStorage.setItem('classArray', JSON.stringify(state.classArray));
     });
   },

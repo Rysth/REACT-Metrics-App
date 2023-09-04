@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './Card.css';
 
 function Card(
   /* prettier-ignore */
   {
-    className,
+    title,
     count,
     imageSource,
   },
 ) {
   return (
-    <div className="card bg-primary-blue text-white">
+    <Link to="/home" className="card text-white bg-primary-blue">
       <img className="card-image" src={imageSource} alt="" />
       <div className="card-actions">
         <button type="button" className="card-button">
@@ -19,15 +20,15 @@ function Card(
         </button>
       </div>
       <div className="card-data">
-        <h3 className="card-title">{className}</h3>
+        <h3 className="card-title">{title}</h3>
         <p className="cart-count">{count}</p>
       </div>
-    </div>
+    </Link>
   );
 }
 
 Card.propTypes = {
-  className: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   count: PropTypes.number.isRequired,
   imageSource: PropTypes.string.isRequired,
 };
