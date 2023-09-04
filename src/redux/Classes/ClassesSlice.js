@@ -37,7 +37,12 @@ const initialState = {
 const classesSlice = createSlice({
   name: 'classes',
   initialState,
-  reducers: {},
+  reducers: {
+    removeClassSelected(state) {
+      state.classSelected = {};
+      console.log(state.classSelected);
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchClasses.fulfilled, (state, action) => {
       const updateArray = action.payload.results;

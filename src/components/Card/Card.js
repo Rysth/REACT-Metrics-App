@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { fetchClassBySlug } from '../../redux/Classes/ClassesSlice';
 import './Card.css';
 
 function Card(
@@ -14,18 +12,8 @@ function Card(
     imageSource,
   },
 ) {
-  const dispatch = useDispatch();
-
-  const handleClassSelected = () => {
-    dispatch(fetchClassBySlug(slug));
-  };
-
   return (
-    <Link
-      to="/home"
-      className="card text-white bg-primary-blue"
-      onClick={handleClassSelected}
-    >
+    <Link to={`/class/${slug}`} className="card text-white bg-primary-blue">
       <img className="card-image" src={imageSource} alt="" />
       <div className="card-actions">
         <button type="button" className="card-button">
