@@ -26,9 +26,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 REACT PROJECT NAME <a name="about-project"></a>
+# 📖 REACT Metrics App <a name="about-project"></a>
 
-- **REACT PROJECT NAME** ...
+- **REACT Metrics App** ...
 
 ## 🛠 Built With <a name="built-with"></a>
 
