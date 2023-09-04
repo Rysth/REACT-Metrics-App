@@ -5,7 +5,7 @@
   align-items: flex-end;
   position: relative;
   height: 11em;
-  padding: 0.75em;
+  padding: 1em;
   text-decoration: none;
   overflow: hidden;
 }
@@ -19,7 +19,7 @@
   object-fit: contain;
   z-index: 0;
   transform: scale(0.8);
-  filter: brightness(0.5) drop-shadow(0 0 5px var(--CL-neutral-white));
+  filter: brightness(1) drop-shadow(0 0 5px var(--CL-neutral-black));
 }
 
 .card-actions,
@@ -48,4 +48,19 @@
 .card-count {
   font-size: 1rem;
   text-align: right;
+}
+
+@media (min-width: 768px) {
+  .card {
+    height: 20em;
+    padding: 2em;
+  }
+
+  .card-title {
+    font-size: 3rem;
+  }
+
+  .card-count {
+    font-size: 2rem;
+  }
 }

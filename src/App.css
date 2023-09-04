@@ -57,6 +57,7 @@ button {
   background: none;
   border: none;
   margin: 0;
+  cursor: pointer;
 }
 
 .container {

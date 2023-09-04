@@ -28,7 +28,7 @@ function Card(
       </div>
       <div className="card-data">
         <h3 className="card-title">{title}</h3>
-        <p className="cart-count">{count}</p>
+        <p className="card-count">{count}</p>
       </div>
     </Link>
   );

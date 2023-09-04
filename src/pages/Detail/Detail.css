@@ -19,6 +19,7 @@
   object-fit: contain;
   height: 12em;
   margin: 0 auto;
+  filter: drop-shadow(0 0 15px black);
 }
 
 .detail-title,
@@ -51,6 +52,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 0;
 }
 
 .detail-card .actions {
@@ -62,4 +64,26 @@
 
 .detail-card .button {
   padding: 0;
+}
+
+@media (min-width: 768px) {
+  .detail-content {
+    padding: 5em 0;
+  }
+
+  .detail-card {
+    padding: initial 0em;
+  }
+
+  .detail-image {
+    height: 30em;
+  }
+
+  .detail-title {
+    font-size: 10rem;
+  }
+
+  .detail-actions {
+    font-size: 3rem;
+  }
 }
