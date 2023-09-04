@@ -1,15 +1,49 @@
+.detail {
+  background-color: var(--CL-primary-blue);
+}
+
+.detail-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0.5em 1em;
+}
+
+.detail-information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 .detail-image {
   object-fit: contain;
   height: 12em;
   margin: 0 auto;
 }
 
+.detail-title,
+.detail-actions {
+  margin: 0;
+  color: var(--CL-neutral-white);
+}
+
+.detail-actions {
+  display: flex;
+  gap: 0.25em;
+}
+
+.detail-title {
+  font-size: 1.75rem;
+}
+
+/* Card */
+
 .detail-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--CL-primary-blue);
   color: var(--CL-neutral-white);
+  padding: 0.25em 1em;
 }
 
 .detail-card .title {
@@ -22,5 +56,10 @@
 .detail-card .actions {
   display: inherit;
   align-items: inherit;
+  padding: 0;
   gap: 0.5em;
+}
+
+.detail-card .button {
+  padding: 0;
 }

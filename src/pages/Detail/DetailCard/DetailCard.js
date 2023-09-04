@@ -1,11 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function DetailCard() {
+function DetailCard({ text, isDark }) {
   return (
-    <div className="detail-card p-4 py-6">
-      <h4 className="detail-card title">Hello World!</h4>
+    <div
+      className={
+        isDark
+          ? 'detail-card bg-primary-blue-dark'
+          : 'detail-card bg-primary-blue'
+      }
+    >
+      <h4 className="detail-card title">{text}</h4>
       <div className="detail-card actions">
-        <p className="detail-card info">500 views</p>
+        <p className="detail-card info">300 views</p>
         <button type="button" className="detail-card button">
           <i className="fa-solid fa-circle-arrow-right" />
         </button>
@@ -13,5 +20,10 @@ function DetailCard() {
     </div>
   );
 }
+
+DetailCard.propTypes = {
+  text: PropTypes.string.isRequired,
+  isDark: PropTypes.bool.isRequired,
+};
 
 export default DetailCard;

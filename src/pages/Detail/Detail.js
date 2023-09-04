@@ -19,23 +19,33 @@ function Detail() {
   return (
     classSelected && (
       <div className="detail ">
-        <div className="md:container mx-auto py-2 grid grid-cols-2">
+        <div className="detail-content container">
           <img className="detail-image" src={classImages[params.slug]} alt="" />
-          <span className="flex flex-col items-end justify-center px-4 text-white">
-            <h3 className="text-2xl uppercase font-bold">
-              {classSelected.name}
-            </h3>
-            <p className="text-xs flex gap-1">
+          <div className="detail-information">
+            <h3 className="detail-title">{classSelected.name}</h3>
+            <p className="detail-actions">
               <span>{classSelected.archetypes.length}</span>
               archetypes
             </p>
-          </span>
+          </div>
         </div>
         <Separator text="List of Archetypes" />
         <div className="grid">
-          {classSelected.archetypes.map((item) => (
-            <DetailCard key={item.document__url} />
-          ))}
+          {classSelected.archetypes.map((item, index) => {
+            if (index % 2 === 0) {
+              return (
+                <DetailCard
+                  key={item.document__url}
+                  text={item.name}
+                  isDark={false}
+                />
+              );
+            }
+
+            return (
+              <DetailCard key={item.document__url} text={item.name} isDark />
+            );
+          })}
         </div>
       </div>
     )
