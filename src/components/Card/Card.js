@@ -2,7 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
-function Card({ title, count, imageSource }) {
+function Card(
+  /* prettier-ignore */
+  {
+    className,
+    count,
+    imageSource,
+  },
+) {
   return (
     <div className="card bg-primary-blue text-white">
       <img className="card-image" src={imageSource} alt="" />
@@ -12,7 +19,7 @@ function Card({ title, count, imageSource }) {
         </button>
       </div>
       <div className="card-data">
-        <h3 className="card-title">{title}</h3>
+        <h3 className="card-title">{className}</h3>
         <p className="cart-count">{count}</p>
       </div>
     </div>
@@ -20,7 +27,7 @@ function Card({ title, count, imageSource }) {
 }
 
 Card.propTypes = {
-  title: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
   count: PropTypes.number.isRequired,
   imageSource: PropTypes.string.isRequired,
 };

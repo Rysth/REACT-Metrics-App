@@ -8,7 +8,8 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchClasses());
+    const item = JSON.parse(localStorage.getItem('classArray'));
+    if (!item) dispatch(fetchClasses());
   }, [dispatch]);
 
   return (

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 import Logo from '../../assets/PNG/logo.png';
 import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
@@ -32,7 +31,13 @@ function Home() {
       </div>
       <div className="grid grid-cols-2">
         {classArray.map((item) => (
-          <Card key={uuidv4()} title={item} count={10} imageSource={Logo} />
+          <Card
+            key={item.slug}
+            id={item.slug}
+            className={item.name}
+            count={item.archetypes.length}
+            imageSource={Logo}
+          />
         ))}
       </div>
     </div>

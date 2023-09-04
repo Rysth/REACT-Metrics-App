@@ -5,25 +5,18 @@ export const fetchClasses = createAsyncThunk(
   'fetch/fetchClasses',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(
-        'https://omgvamp-hearthstone-v1.p.rapidapi.com/info',
-        {
-          headers: {
-            'X-RapidAPI-Key':
-              '94f122175fmsh15a6cd6a403b1bdp1a957cjsn334dbf5dc463',
-            'X-RapidAPI-Host': 'omgvamp-hearthstone-v1.p.rapidapi.com',
-          },
-        },
-      );
-      return response.data.classes;
+      const response = await axios.get('https://api.open5e.com/v1/classes/');
+      return response.data;
     } catch (error) {
       return rejectWithValue(error.message);
     }
   },
 );
 
+const existClassArray = JSON.parse(localStorage.getItem('classArray'));
+
 const initialState = {
-  classArray: [],
+  classArray: existClassArray || [],
   isLoading: false,
 };
 
@@ -33,7 +26,8 @@ const classesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchClasses.fulfilled, (state, action) => {
-      state.classArray = action.payload;
+      state.classArray = action.payload.results;
+      localStorage.setItem('classArray', JSON.stringify(state.classArray));
     });
   },
 });
