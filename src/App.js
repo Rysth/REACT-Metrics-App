@@ -1,7 +1,16 @@
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchClasses } from './redux/Classes/Classes';
 import './App.css';
 import Home from './pages/Home/Home';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchClasses());
+  }, [dispatch]);
+
   return (
     <div className="app">
       <Home />
