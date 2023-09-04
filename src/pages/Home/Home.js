@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import Logo from '../../assets/PNG/logo.png';
 import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
+import classImages from '../../redux/Classes/Data/Images';
 import './Home.css';
 
 function Home() {
@@ -36,7 +37,7 @@ function Home() {
             id={item.slug}
             className={item.name}
             count={item.archetypes.length}
-            imageSource={Logo}
+            imageSource={classImages[item.slug]}
           />
         ))}
       </div>

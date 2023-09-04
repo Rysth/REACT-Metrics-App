@@ -34,9 +34,10 @@
 
 .card-title {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 
 .card-count {
+  font-size: 1rem;
   text-align: right;
 }

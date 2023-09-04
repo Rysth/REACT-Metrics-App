@@ -17,7 +17,6 @@ const existClassArray = JSON.parse(localStorage.getItem('classArray'));
 
 const initialState = {
   classArray: existClassArray || [],
-  isLoading: false,
 };
 
 const classesSlice = createSlice({
