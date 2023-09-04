@@ -7,7 +7,6 @@
   height: 11em;
   padding: 1em;
   text-decoration: none;
-  overflow: hidden;
 }
 
 .card-image {
@@ -54,6 +53,7 @@
   .card {
     height: 20em;
     padding: 2em;
+    transition: 0.15s;
   }
 
   .card-title {
@@ -62,5 +62,19 @@
 
   .card-count {
     font-size: 2rem;
+  }
+
+  .card-image {
+    left: 2em;
+    width: max-content;
+    transition: 0.15s;
+  }
+
+  .card:hover {
+    background-color: var(--CL-neutral-black);
+  }
+
+  .card:hover .card-image {
+    transform: scale(1.8) translateY(-5em) translateX(65%);
   }
 }
