@@ -5,8 +5,8 @@ import './Separator.css';
 function Separator({ text }) {
   return (
     <div className="separator">
-      <div className="separator-content">
-        <h2 className="text-white uppercase text-xs ">{text}</h2>
+      <div className="separator-content container">
+        <h2 className="separator-title">{text}</h2>
       </div>
     </div>
   );

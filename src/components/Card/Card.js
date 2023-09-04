@@ -13,7 +13,7 @@ function Card(
   },
 ) {
   return (
-    <Link to={`/class/${slug}`} className="card text-white bg-primary-blue">
+    <Link to={`/class/${slug}`} className="card bg-primary-blue">
       <img className="card-image" src={imageSource} alt="" />
       <div className="card-actions">
         <button type="button" className="card-button">

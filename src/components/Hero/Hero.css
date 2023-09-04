@@ -35,3 +35,8 @@
   font-size: 0.95rem;
   margin: 0;
 }
+
+.card-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

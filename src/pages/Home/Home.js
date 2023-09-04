@@ -13,16 +13,18 @@ function Home() {
     <div className="home">
       <Hero count={classArray.length} />
       <Separator text="Stats by Class" />
-      <div className="grid grid-cols-2">
-        {classArray.map((item) => (
-          <Card
-            key={item.slug}
-            slug={item.slug}
-            title={item.name}
-            count={item.archetypes.length}
-            imageSource={classImages[item.slug]}
-          />
-        ))}
+      <div className="card-system">
+        <div className="card-content">
+          {classArray.map((item) => (
+            <Card
+              key={item.slug}
+              slug={item.slug}
+              title={item.name}
+              count={item.archetypes.length}
+              imageSource={classImages[item.slug]}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
