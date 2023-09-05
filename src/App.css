@@ -1,0 +1,82 @@
+@import url('https://fonts.cdnfonts.com/css/lato');
+@import url('https://fonts.cdnfonts.com/css/gill-sans-2');
+
+:root {
+  --CL-primary-blue: #326cd8;
+  --CL-primary-blue-dark: rgb(32, 85, 184);
+  --CL-neutral-white: #fff;
+  --CL-neutral-black: #0d0d0d;
+  --FF-lato: 'Lato', sans-serif;
+  --FF-gill-sans: 'Gill Sans', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--FF-lato);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--FF-gill-sans);
+  margin: 0;
+}
+
+p,
+button,
+input,
+label,
+textarea {
+  font-family: var(--FF-lato);
+}
+
+img,
+picture,
+svg,
+iframe,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.bg-primary-blue {
+  background-color: var(--CL-primary-blue);
+}
+
+.bg-primary-blue-dark {
+  background-color: var(--CL-primary-blue-dark);
+}
+
+.hero-section {
+  height: 12em;
+}
+
+.hero-image {
+  height: 100%;
+  object-fit: contain;
+}

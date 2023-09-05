@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component snapshot 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "opacity": 0,
+      }
+    }
+  >
+    <a
+      className="card bg-primary-blue"
+      href="/class/example-slug"
+      onClick={[Function]}
+    >
+      <img
+        alt=""
+        className="card-image"
+        src="example-image.jpg"
+      />
+      <div
+        className="card-actions"
+      >
+        <button
+          className="card-button"
+          type="button"
+        >
+          <i
+            className="fa-solid fa-circle-arrow-right"
+          />
+        </button>
+      </div>
+      <div
+        className="card-data"
+      >
+        <h3
+          className="card-title"
+        >
+          Example Title
+        </h3>
+        <p
+          className="card-count"
+        >
+          42
+        </p>
+      </div>
+    </a>
+  </div>,
+  ",",
+]
+`;

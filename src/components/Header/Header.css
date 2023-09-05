@@ -1,0 +1,18 @@
+.header-content {
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content > * {
+  font-size: 0.85rem;
+  color: var(--CL-neutral-white);
+}
+
+.header-button,
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}

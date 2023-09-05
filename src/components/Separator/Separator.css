@@ -1,0 +1,13 @@
+.separator {
+  background-color: var(--CL-primary-blue-dark);
+}
+
+.separator-content {
+  padding: 0.5em 1em;
+}
+
+.separator-title {
+  font-size: 0.75rem;
+  color: var(--CL-neutral-white);
+  text-transform: uppercase;
+}
