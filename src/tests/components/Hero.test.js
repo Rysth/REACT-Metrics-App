@@ -10,7 +10,7 @@ test('Hero component renders with count', () => {
   expect(heroCountElement).toBeInTheDocument();
 });
 
-test('Hero component initial translateY style is applied', () => {
+test('Hero component must not be null', () => {
   const { container } = render(<Hero count={42} />);
   const heroElement = container.querySelector('.hero');
   expect(heroElement).not.toBeNull();
