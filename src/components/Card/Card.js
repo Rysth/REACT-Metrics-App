@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './Card.css';
 import { darkCards } from '../../redux/Classes/Data/Images';
 
@@ -16,21 +17,29 @@ function Card(
   const isDark = darkCards.includes(slug);
 
   return (
-    <Link
-      to={`/class/${slug}`}
-      className={isDark ? 'card bg-primary-blue-dark' : 'card bg-primary-blue'}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 2, type: 'spring' }}
     >
-      <img className="card-image" src={imageSource} alt="" />
-      <div className="card-actions">
-        <button type="button" className="card-button">
-          <i className="fa-solid fa-circle-arrow-right" />
-        </button>
-      </div>
-      <div className="card-data">
-        <h3 className="card-title">{title}</h3>
-        <p className="card-count">{count}</p>
-      </div>
-    </Link>
+      <Link
+        to={`/class/${slug}`}
+        className={
+          isDark ? 'card bg-primary-blue-dark' : 'card bg-primary-blue'
+        }
+      >
+        <img className="card-image" src={imageSource} alt="" />
+        <div className="card-actions">
+          <button type="button" className="card-button">
+            <i className="fa-solid fa-circle-arrow-right" />
+          </button>
+        </div>
+        <div className="card-data">
+          <h3 className="card-title">{title}</h3>
+          <p className="card-count">{count}</p>
+        </div>
+      </Link>
+    </motion.div>
   );
 }
 

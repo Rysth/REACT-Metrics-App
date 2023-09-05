@@ -55,6 +55,11 @@
   padding: 0;
 }
 
+.detail-card .info {
+  display: flex;
+  gap: 0.25em;
+}
+
 .detail-card .actions {
   display: inherit;
   align-items: inherit;

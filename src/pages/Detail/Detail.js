@@ -11,7 +11,6 @@ function Detail() {
   const { classSelected } = useSelector((store) => store.classes);
   const dispatch = useDispatch();
   const params = useParams();
-
   useEffect(() => {
     dispatch(fetchClassBySlug(params.slug));
   }, [dispatch, params.slug]);
@@ -35,15 +34,21 @@ function Detail() {
             if (index % 2 === 0) {
               return (
                 <DetailCard
-                  key={item.document__url}
+                  key={`Key: ${item.desc}`}
                   text={item.name}
                   isDark={false}
+                  count={index}
                 />
               );
             }
 
             return (
-              <DetailCard key={item.document__url} text={item.name} isDark />
+              <DetailCard
+                key={`Key: ${item.desc}`}
+                text={item.name}
+                isDark
+                count={index}
+              />
             );
           })}
         </div>

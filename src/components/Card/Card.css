@@ -9,6 +9,10 @@
   text-decoration: none;
 }
 
+.card:active {
+  background-color: var(--CL-neutral-black);
+}
+
 .card-image {
   height: 100%;
   width: 100%;

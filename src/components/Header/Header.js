@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { classesActions } from '../../redux/Classes/ClassesSlice';
 import './Header.css';
 
@@ -15,7 +16,12 @@ function Header() {
   };
 
   return (
-    <header className="header bg-primary-blue-dark">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="header bg-primary-blue-dark"
+    >
       <div className="header-content container">
         <button
           type="button"
@@ -31,7 +37,7 @@ function Header() {
           <i className="fa-solid fa-gear" />
         </div>
       </div>
-    </header>
+    </motion.div>
   );
 }
 
