@@ -4,10 +4,8 @@
 :root {
   --CL-primary-blue: #326cd8;
   --CL-primary-blue-dark: rgb(32, 85, 184);
-
   --CL-neutral-white: #fff;
   --CL-neutral-black: #0d0d0d;
-
   --FF-lato: 'Lato', sans-serif;
   --FF-gill-sans: 'Gill Sans', sans-serif;
 }
