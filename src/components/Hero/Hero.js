@@ -7,9 +7,9 @@ import './Hero.css';
 function Hero({ count }) {
   return (
     <motion.div
-      initial={{ translateY: -200 }}
+      initial={{ translateY: -400 }}
       animate={{ translateY: 0 }}
-      transition={{ duration: 1, delay: 1 }}
+      transition={{ duration: 1 }}
       className="hero"
     >
       <div className="hero-content container">
