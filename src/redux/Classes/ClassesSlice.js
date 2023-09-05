@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 export const fetchClasses = createAsyncThunk(
   'fetch/fetchClasses',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get('https://api.open5e.com/v1/classes/');
-      return response.data;
+      const response = await fetch('https://api.open5e.com/v1/classes/');
+      const data = await response.json();
+      return data;
     } catch (error) {
       return rejectWithValue(error.message);
     }
@@ -17,10 +17,14 @@ export const fetchClassBySlug = createAsyncThunk(
   'fetch/fetchClassBySlug',
   async (slug, { rejectWithValue }) => {
     try {
-      const response = await axios.get(
+      const response = await fetch(
         `https://api.open5e.com/v1/classes/?slug=${slug}`,
       );
-      return response.data.results;
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      return data.results;
     } catch (error) {
       return rejectWithValue(error.message);
     }
