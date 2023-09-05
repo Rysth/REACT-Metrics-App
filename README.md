@@ -28,7 +28,7 @@
 
 # 📖 REACT Metrics App <a name="about-project"></a>
 
-- **REACT Metrics App** ...
+- **REACT Metrics App** is a web application based on the famous Dungeons and Dragons games, where users can find different classes existing from the original game and also see a list of the most common archetypes for each class. Built with HTML, CSS, JS, and React.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -38,18 +38,19 @@
 - ✅ [CSS](https://www.w3schools.com/css/)
 - ✅ [JavaScript](https://www.w3schools.com/js/)
 - ✅ [React](https://react.dev/)
+- ✅ [Framer Motion Library](https://www.framer.com/motion/)
 
 ### Key Features <a name="key-features"></a>
 
-- 🔰 Feature 1
-- 🔰 Feature 2
-- 🔰 Feature 3
+- 🔰 Display different classes from the Dungeons & Dragons API.
+- 🔰 Show details and archetypes about a specific class from the D&D API.
+- 🔰 Beautiful animations thanks to Framer Motion Library.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://react-bookstore-2060.onrender.com/)
+- [Live Demo](https://react-metrics-app-rijy.onrender.com/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -60,8 +61,8 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/Rysth/REACT-Template.git
-cd REACT-Template
+git clone https://github.com/Rysth/REACT-Metrics-App.git
+cd REACT-Metrics-App
 code . (To open VS Code Editor)
 ```
 
@@ -109,9 +110,8 @@ _Use at the end '--fix' to help you out with any error._
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Future Feature 1
-- [ ] Future Feature 2
-- [ ] Future Feature 3
+- [ ] Implements Strapi as Headless CMS.
+- [ ] Refactor the Code using TailwindCSS.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,6 +134,8 @@ as well.
 
 I would like to thank the Microverse Team for reviewing my code and making me a better
 professional.
+
+Thank you so much to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the design provided. Based on the [CC License](https://creativecommons.org/licenses/by-nc/4.0/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
