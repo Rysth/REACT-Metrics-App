@@ -43,7 +43,7 @@ function Detail() {
         <Separator text="List of Archetypes" />
         <motion.div
           animate={{ opacity: [0, 1] }}
-          transition={{ duration: 2, delay: 1, delayChildren: 1 }}
+          transition={{ duration: 1, delay: 1 }}
           className="grid"
         >
           {classSelected.archetypes.map((item, index) => {
